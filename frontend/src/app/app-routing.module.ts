@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 // importar o módulo de roteamento
 import { RouterModule, Routes } from "@angular/router";
 import { ListarProdutosComponent } from "./pages/listar-produtos/listar-produtos.component";
+import { ProdutoComponent } from "./pages/produto/produto.component";
 
 // rota -> componente
 /**
@@ -25,6 +26,10 @@ const rotas: Routes = [
     // http://localhost:4200/produtos
     path: 'produtos',
     component: ListarProdutosComponent
+  },
+  {
+    path: 'produtos/:idProduto', // rota com o parâmetro idProduto
+    component: ProdutoComponent
   }
 ]
 
