@@ -27,7 +27,7 @@ const rotas: Routes = [
     path: 'produtos',
     component: ListarProdutosComponent
   },
-  {
+  { 
     path: 'produtos/:idProduto', // rota com o parâmetro idProduto
     component: ProdutoComponent
   }

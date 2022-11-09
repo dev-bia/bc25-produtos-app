@@ -37,6 +37,16 @@ export class ProdutoComponent implements OnInit {
     .subscribe(
       (prod) => {
         this.produto = prod
+
+        /**
+         * setValue permite alterar o valor dos campos de um formGroup
+         */
+        this.produtoForm.setValue({
+          descricao: prod.descricao,
+          nome: prod.nome,
+          foto: prod.foto,
+          preco: prod.preco
+        })
       }
     )
   }

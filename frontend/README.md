@@ -11,3 +11,13 @@ Ao instalar os pacotes, execute o projeto com o comando
 ```
 ng s -o
 ```
+
+## Desafios
+
+- [ ] Criar rota para criação de produtos
+- [ ] Criar formulário na rota de criação de produtos
+- [ ] Na página de listagem de produtos, fazer com que o botão de adicionar produto leve para a página de criação de produto
+- [ ] Na página de listagem de produto pelo ID, fazer com que o botão de voltar leve para a página de listagem de produtos
+- [ ] Na página de listagem de produto pelo ID, caso o produto não exista, mostre uma mensagem como o exemplo abaixo
+
+[Not Found Example](../.github/not_found.png)
