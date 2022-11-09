@@ -12,9 +12,10 @@
     </mat-card-content>
     <mat-divider></mat-divider>
     <mat-card-actions>
-      <button mat-stroked-button color="primary" matTooltip="Editar Produto">
+      <!-- /produtos/id -->
+      <a [routerLink]="'/produtos/' + prod.id" mat-stroked-button color="primary" matTooltip="Editar Produto">
         <mat-icon>edit</mat-icon>
-      </button>
+      </a>
       <button mat-stroked-button color="warn"matTooltip="Deletar Produto">
         <mat-icon>delete</mat-icon>
       </button>

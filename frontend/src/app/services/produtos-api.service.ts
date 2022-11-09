@@ -17,4 +17,9 @@ export class ProdutosApiService {
   listarProdutos() {
     return this.http.get<Array<Produto>>(this.baseUrl)
   }
+
+  procurarPorId(id: number) {
+    // http://localhost:3000/produtos/idProduto
+    return this.http.get<Produto>(`${this.baseUrl}/${id}`) // fazendo a requisição para recuperar um produto por id
+  }
 }
