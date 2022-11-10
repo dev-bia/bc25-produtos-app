@@ -22,4 +22,9 @@ export class ProdutosApiService {
     // http://localhost:3000/produtos/idProduto
     return this.http.get<Produto>(`${this.baseUrl}/${id}`) // fazendo a requisição para recuperar um produto por id
   }
+
+  criarProduto(prod: Produto) { // prod possui as informações do produto que será salvo
+    // http://localhost:3000/produtos
+    return this.http.post<Produto>(this.baseUrl, prod)
+  }
 }

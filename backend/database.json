@@ -139,6 +139,27 @@
       "preco": "893.00",
       "descricao": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
       "foto": ""
+    },
+    {
+      "nome": "Computador",
+      "preco": 1500,
+      "descricao": "PC gamer da casas Bahia",
+      "foto": "https://a-static.mlcdn.com.br/800x560/pc-gamer-completo-imperiums-i5-16gb-hd-1000gb-gpu-2gb-imperiumsltda/imperiumsinformaticaltda/6d21481a11ba11ecacaf4201ac185013/a6b96d87d0f2ed7c9cd8b0cb7da47286.jpeg",
+      "id": 21
+    },
+    {
+      "nome": "Computador",
+      "preco": 1500,
+      "descricao": "PC gamer da casas Bahia",
+      "foto": "https://a-static.mlcdn.com.br/800x560/pc-gamer-completo-imperiums-i5-16gb-hd-1000gb-gpu-2gb-imperiumsltda/imperiumsinformaticaltda/6d21481a11ba11ecacaf4201ac185013/a6b96d87d0f2ed7c9cd8b0cb7da47286.jpeg",
+      "id": 22
+    },
+    {
+      "nome": "Pizza",
+      "preco": 25,
+      "descricao": "",
+      "foto": "http://bonissima.com.br/web/image/product.template/34332/image_1024?unique=b35c554",
+      "id": 23
     }
   ]
 }
