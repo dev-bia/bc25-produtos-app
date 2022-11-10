@@ -16,6 +16,7 @@ export class ProdutoComponent implements OnInit {
   altImg: string = 'https://igp.rs.gov.br/themes/modelo-noticias/images/outros/GD_imgSemImagem.png'
 
   produto!: Produto
+  produtoNaoEncontrado: boolean = false
 
   produtoForm: FormGroup = new FormGroup({
     descricao: new FormControl('', [ Validators.required ]),
@@ -37,7 +38,6 @@ export class ProdutoComponent implements OnInit {
     .subscribe(
       (prod) => {
         this.produto = prod
-
         /**
          * setValue permite alterar o valor dos campos de um formGroup
          */
@@ -47,6 +47,12 @@ export class ProdutoComponent implements OnInit {
           foto: prod.foto,
           preco: prod.preco
         })
+      },
+      (erro) => {
+        /*
+          temos a certeza de que o produto realmente não existe.
+        */
+        this.produtoNaoEncontrado = true
       }
     )
   }

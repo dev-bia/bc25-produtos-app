@@ -1,4 +1,4 @@
-<main class="container" *ngIf="produto">
+<main class="container" *ngIf="produto != undefined"> <!-- existe um produto -->
   <mat-card>
     <img [src]="produto.foto || altImg" [alt]="produto.nome" mat-card-image>
     <mat-card-subtitle>{{ produto.nome }}</mat-card-subtitle>
@@ -41,7 +41,14 @@
       </form>
     </mat-card-content>
   </mat-card>
-  <button mat-mini-fab color="accent" id="back" matTooltip="Voltar" matTooltipPosition="left">
+  <button routerLink="/produtos" mat-mini-fab color="accent" id="back" matTooltip="Voltar" matTooltipPosition="left">
     <mat-icon>arrow_backward</mat-icon>
+  </button>
+</main>
+<main *ngIf="produtoNaoEncontrado == true" class="container">
+  <h1>404 :(</h1>
+  <p>Produto não encontrado</p>
+  <button mat-raised-button color="primary" routerLink="/produtos">
+    Voltar
   </button>
 </main>

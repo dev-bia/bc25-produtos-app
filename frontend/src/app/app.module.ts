@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './pages/produto/produto.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NovoProdutoComponent } from './pages/novo-produto/novo-produto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarProdutosComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    NovoProdutoComponent
   ],
   imports: [
     BrowserModule,
