@@ -27,4 +27,10 @@ export class ProdutosApiService {
     // http://localhost:3000/produtos
     return this.http.post<Produto>(this.baseUrl, prod)
   }
+
+  deletarPorId(id: number) {
+    //http://localhost:3000/produtos/id
+    return this.http.delete<void>(`${this.baseUrl}/${id}`)
+  }
+
 }

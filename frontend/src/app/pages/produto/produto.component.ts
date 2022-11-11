@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Produto } from 'src/app/interfaces/Produto';
 import { ProdutosApiService } from 'src/app/services/produtos-api.service';
 
@@ -27,7 +27,8 @@ export class ProdutoComponent implements OnInit {
 
   constructor(
     private rota: ActivatedRoute, // permite acessar as informações (parâmetros) da rota que está ativa no momento
-    private produtosService: ProdutosApiService
+    private produtosService: ProdutosApiService,
+    private router: Router
   ) { }
 
   ngOnInit(): void { // executado quando o componente é renderizado
@@ -55,5 +56,14 @@ export class ProdutoComponent implements OnInit {
         this.produtoNaoEncontrado = true
       }
     )
+    }
+  //espera um parametro do tipo number, então preciso transformar sempre em numero
+  deletar(){
+    this.produtosService.deletarPorId(this.produto.id as number).subscribe(
+      () => {
+        this.router.navigateByUrl('/produtos')
+      }
+    )
   }
+
 }

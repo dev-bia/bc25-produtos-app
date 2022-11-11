@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Produto } from 'src/app/interfaces/Produto';
 import { ProdutosApiService } from 'src/app/services/produtos-api.service';
 
@@ -18,7 +20,9 @@ export class NovoProdutoComponent implements OnInit {
   })
 
   constructor(
-    private produtoService: ProdutosApiService
+    private produtoService: ProdutosApiService,
+    private snackbar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +36,12 @@ export class NovoProdutoComponent implements OnInit {
     .subscribe(
       (prod) => {
         console.log(prod)
-        alert('Produto salvo com sucesso!')
+        this.snackbar.open("Produto salvo com sucesso!", 'ok', {
+          duration: 5000,
+          horizontalPosition: 'right',
+          verticalPosition: 'top'
+         })
+  
         // DESAFIO: substituir o alert pelo snackbar do Material
       }
     )
